@@ -11,15 +11,15 @@
             </div>
 
         <!-- plugins:js -->
-            <script src="<?= base_url('assets/template') ?>/vendors/js/vendor.bundle.base.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/vendors/js/vendor.bundle.base.js"></script>
         <!-- endinject -->
 
         <!-- inject:js -->
-            <script src="<?= base_url('assets/template') ?>/js/off-canvas.js"></script>
-            <script src="<?= base_url('assets/template') ?>/js/hoverable-collapse.js"></script>
-            <script src="<?= base_url('assets/template') ?>/js/template.js"></script>
-            <script src="<?= base_url('assets/template') ?>/js/settings.js"></script>
-            <script src="<?= base_url('assets/template') ?>/js/todolist.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/js/off-canvas.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/js/hoverable-collapse.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/js/template.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/js/settings.js"></script>
+            <script src="<?= base_url('assets/kitsu_template') ?>/js/todolist.js"></script>
         <!-- endinject -->
             <script src="https://kit.fontawesome.com/cbb81e50b1.js" crossorigin="anonymous"></script>
 
