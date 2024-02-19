@@ -11,10 +11,10 @@
 
         <!-- plugins:css -->
 
-            <link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendors/feather/feather.css">
-            <link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendors/ti-icons/css/themify-icons.css">
-            <link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendors/css/vendor.bundle.base.css">
-            <link rel="stylesheet" href="<?= base_url('assets/template') ?>/css/vertical-layout-light/style.css">
+            <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/feather/feather.css">
+            <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/ti-icons/css/themify-icons.css">
+            <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/css/vendor.bundle.base.css">
+            <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/css/vertical-layout-light/style.css">
             <!-- <link rel="shortcut icon" href="../../images/favicon.png"> -->
 
     </head>
@@ -64,12 +64,12 @@
             
         </div>
 
-        <script src="<?= base_url('assets/template') ?>/vendors/js/vendor.bundle.base.js"></script>
-        <script src="<?= base_url('assets/template') ?>/js/off-canvas.js"></script>
-        <script src="<?= base_url('assets/template') ?>/js/hoverable-collapse.js"></script>
-        <script src="<?= base_url('assets/template') ?>/js/template.js"></script>
-        <script src="<?= base_url('assets/template') ?>/js/settings.js"></script>
-        <script src="<?= base_url('assets/template') ?>/js/todolist.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/vendors/js/vendor.bundle.base.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/js/off-canvas.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/js/hoverable-collapse.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/js/template.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/js/settings.js"></script>
+        <script src="<?= base_url('assets/kitsu_template') ?>/js/todolist.js"></script>
 
     </body>
 
