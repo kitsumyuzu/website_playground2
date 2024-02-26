@@ -21,7 +21,7 @@
             <script src="<?= base_url('assets/kitsu_template') ?>/js/settings.js"></script>
             <script src="<?= base_url('assets/kitsu_template') ?>/js/todolist.js"></script>
         <!-- endinject -->
-            <script src="https://kit.fontawesome.com/cbb81e50b1.js" crossorigin="anonymous"></script>
+            <!-- <script src="https://kit.fontawesome.com/cbb81e50b1.js" crossorigin="anonymous"></script> -->
 
     </body>
 

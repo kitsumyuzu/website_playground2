@@ -11,6 +11,8 @@
             <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/ti-icons/css/themify-icons.css">
             <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/css/vendor.bundle.base.css">
         <!-- endinject -->
+        <!-- Plugin css for this page -->
+            <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/mdi/css/materialdesignicons.min.css">
         <!-- inject:css -->
             <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/css/vertical-layout-light/style.css">
         <!-- endinject -->
@@ -18,4 +20,4 @@
             <link rel="stylesheet" href="<?= base_url('assets/kitsu_template') ?>/vendors/fontawesome-icon/fontawesome.min.css">
     </head>
 
-    <body class="sidebar-dark">
+    <body class="sidebar-dark sidebar-icon-only">

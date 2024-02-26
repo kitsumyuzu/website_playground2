@@ -15,14 +15,7 @@ class Home extends BaseController {
 
 			} else if (session() -> get('id') > 0) {
 
-				$Schema = new Schema();
-
-					$setting['profile'] = $Schema -> getWhere('user', array('id_user' => session() -> get('id')));
-
-				echo view('layout/_header');
-				echo view('layout/_menu', $setting);
-				echo view('pages/dashboard');
-				echo view('layout/_footer');
+				return redirect() -> to('/Home/dashboard');
 				
 			}
 			
@@ -40,7 +33,7 @@ class Home extends BaseController {
 
 					$setting['profile'] = $Schema -> getWhere('user', array('id_user' => session() -> get('id')));
 
-					$fetch['media'] = $Schema -> visual_table('media');
+					$fetch['data_paket'] = $Schema -> visual_table('paket');
 
 				echo view('layout/_header');
 				echo view('layout/_menu', $setting);
@@ -49,6 +42,47 @@ class Home extends BaseController {
 
 			}
 			
+		}
+
+		public function user() {
+
+			if (session() -> get('id') == NULL || session() -> get('id') < 0) {
+
+				return redirect() -> to('/Home/');
+
+			} else if (session() -> get('id') > 0) {
+
+				$Schema = new Schema();
+
+					$setting['profile'] = $Schema -> getWhere('user', array('id_user' => session() -> get('id')));
+					$fetch['data_user'] = $Schema -> visual_table('user');
+
+				echo view('layout/_header');
+				echo view('layout/_menu', $setting);
+				echo view('pages/user', $fetch);
+				echo view('layout/_footer');
+			}
+
+		}
+
+		public function view_insert_user() {
+
+			if (session() -> get('id') == NULL || session() -> get('id') < 0) {
+
+				return redirect() -> to('/Home/');
+
+			} else if (session() -> get('id') > 0) {
+
+				$Schema = new Schema();
+
+					$setting['profile'] = $Schema -> getWhere('user', array('id_user' => session() -> get('id')));
+
+				echo view('layout/_header');
+				echo view('layout/_menu', $setting);
+				echo view('forms/insert_user');
+				echo view('layout/_footer');
+			}
+
 		}
 
 	// [ Login & Logout Function ] ==================================================================================================== //
@@ -109,38 +143,5 @@ class Home extends BaseController {
 		}
 
 	// [ CRUD ] ==================================================================================================== //
-	
-		public function create_image() {
-
-			if (session() -> get('id') == NULL || session() -> get('id') < 0) {
-				
-				return redirect() -> to('/home/');
-
-			} else if (session() -> get() > 0) {
-
-				$Schema = new Schema();
-
-				$images = $this -> request -> getFile('images');
-				$images_description = $this -> request -> getFile('images_description');
-
-					if ($images && $images -> isValid() &&! $images -> hasMoved()) {
-
-						$media = $images -> getRandomName();
-						$images -> move('assets/images/storage/', $media);
-
-					}
-
-				$mediaData = array(
-					'media' => $media,
-					'media_description' => $images_description
-				);
-				
-					$Schema -> create_data('media', $mediaData);
-
-				return redirect() -> to('/home/dashboard');
-
-			}
-
-		}
 
 }

@@ -5,9 +5,6 @@
                     <a class="navbar-brand brand-logo-mini" href="/Home/"><img src="<?= base_url('/assets/images/items') ?>/logo-brand-collapse.png" alt="logo"></a>
                 </div>
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                        <span class="icon-menu"></span>
-                    </button>
                     <ul class="navbar-nav navbar-nav-right">
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="<?= base_url('assets/images/'.($settings -> profile ? $settings -> profile : 'default-profile.png')) ?>" alt="profile"/></a>
@@ -34,9 +31,34 @@
                         <ul class="nav">
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/dashboard/?">
-                                    <i class="fas fa-house-chimney menu-icon"></i>
+                                <a class="nav-link active" href="/home/dashboard/?">
+                                    <i class="mdi mdi-home menu-icon"></i>
                                     <span class="menu-title">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <hr>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="mdi mdi-file menu-icon"></i>
+                                    <span class="menu-title">Laporan</span>
+                                </a>
+                            </li>
+
+                            <hr>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Home/user">
+                                    <i class="mdi mdi-account-key menu-icon"></i>
+                                    <span class="menu-title">User</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="mdi mdi-settings menu-icon"></i>
+                                    <span class="menu-title">Settings</span>
                                 </a>
                             </li>
 
