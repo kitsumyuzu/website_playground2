@@ -19,112 +19,93 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
+                        
+                        <!-- start: daftar anak bermain -->
                             <div class="col-md-12 grid-margin">
                                 <div class="card">
                                     <div class="card-body">
-
-                                        <div class="justify-content-end d-flex">
-                                            <a href="#"><i class="far fa-calendar-check"></i> <small>Tambahkan paket bermain</small></a>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr align="center">
+                                                        <th colspan="5">Daftar Anak Bermain</th>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <th>#</th>
+                                                        <th>Nama Anak</th>
+                                                        <th>Nama Orang Tua</th>
+                                                        <th>Durasi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr align="center">
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>00:00:00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-
-                                        <form action="" method="post">
-                                            <div class="row">
-                                                <div class="form-group col-md-4 grid-margin">
-                                                    <label for="">Nama Anak</label>
-                                                    <input type="text" class="form-control" id="" placeholder="Nama Anak" name="nama_anak">
-                                                </div>
-                                                <div class="form-group col-md-4 grid-margin">
-                                                    <label for="">Nama Ortu</label>
-                                                    <input type="text" class="form-control" id="" placeholder="Nama Ortu" name="nama_ortu">
-                                                </div>
-                                                <div class="form-group col-md-4 grid-margin">
-                                                    <label for="">Paket</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option selected disabled>Pilih paket</option>
-
-                                                        <?php foreach($data_paket as $data) { ?>
-
-                                                            <option value="<?php echo $data['id_paket'] ?>"><?php echo ucwords($data['nama_paket']) ?></option>
-
-                                                        <?php } ?>
-
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </form>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-						<div class="row">
-                            <!-- start: daftar anak bermain -->
-                                <div class="col-md-6 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered">
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="5">Daftar Anak Bermain</th>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <th>#</th>
-                                                            <th>nama anak</th>
-                                                            <th>nama ortu</th>
-                                                            <th>paket</th>
-                                                            <th>harga</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td>1.</td>
-                                                            <td>cina</td>
-                                                            <td>yanto</td>
-                                                            <td>1 jam</td>
-                                                            <td>Rp 20.000</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                        <!-- end: daftar anak bermain -->
+                        
+                        <!-- start: daftar anak selesai bermain -->
+                            <div class="col-md-12 grid-margin">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr align="center">
+                                                        <th colspan="5">Daftar Anak Selesai Bermain</th>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <th>#</th>
+                                                        <th>Nama Anak</th>
+                                                        <th>Nama Orang Tua</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr align="center">
+                                                        <td>1.</td>
+                                                        <td>Kei Rolando</td>
+                                                        <td>Ismail</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-warning"><b>Pending</b></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <td>2.</td>
+                                                        <td>Nur Yakerta</td>
+                                                        <td>Nuel</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-success"><b>Paid</b></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <td>3.</td>
+                                                        <td>Yanto</td>
+                                                        <td>Sam</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-warning"><b>Pending</b></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <td>4.</td>
+                                                        <td>Zerunda</td>
+                                                        <td>Budi</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-success"><b>Paid</b></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                            <!-- end: daftar anak bermain -->
-                            <!-- start: daftar anak selesai bermain -->
-                                <div class="col-md-6 grid-margin">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered">
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="5">Daftar Anak Selesai Bermain</th>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <th>#</th>
-                                                            <th>nama anak</th>
-                                                            <th>nama ortu</th>
-                                                            <th>paket</th>
-                                                            <th>harga</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td>1.</td>
-                                                            <td>cina</td>
-                                                            <td>yanto</td>
-                                                            <td>1 jam</td>
-                                                            <td>Rp 20.000</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- end: daftar anak selesai bermain -->
-                        </div>
+                            </div>
+                        <!-- end: daftar anak selesai bermain -->

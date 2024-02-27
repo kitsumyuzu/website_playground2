@@ -35,32 +35,30 @@
                                                     <thead>
                                                         <tr align="center">
                                                             <th>#</th>
+                                                            <th>Profile</th>
                                                             <th>Username</th>
                                                             <th>Email</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr align="center">
-                                                            <td>1.</td>
-                                                            <td>Admin</td>
-                                                            <td>admin@root.com</td>
-                                                            <td>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-refresh" style="color: #ffc100"></i></button>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-delete-sweep" style="color: #ff0000"></i></button>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-information-variant" style="color: #248afd"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>2.</td>
-                                                            <td>Kasir</td>
-                                                            <td>kasir@root.com</td>
-                                                            <td>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-refresh" style="color: #ffc100"></i></button>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-delete-sweep" style="color: #ff0000"></i></button>
-                                                                <button class="btn btn-link btn-sm"><i class="mdi mdi-information-variant" style="color: #248afd"></i></button>
-                                                            </td>
-                                                        </tr>
+                                                        <?php $no=1; foreach($data_user as $data) { ?>
+                                                            <tr align="center">
+                                                                <td><?php echo $no++ ?></td>
+                                                                <td><img src="<?php echo base_url('assets/images/storage/'.($data['_profile'] ? $data['_profile'] : 'default-profile.png')) ?>" alt="avatar" style="object-fit: cover;"></td>
+                                                                <td><?php echo $data['username'] ?></td>
+                                                                <td><?php echo $data['email'] ?></td>
+                                                                <td>
+                                                                    <a href="<?= base_url('/Home/view_update_user/'.$data['id_user']) ?>">
+                                                                        <button class="btn btn-link btn-sm"><i class="mdi mdi-account-edit" style="color: #ffc100"></i></button>
+                                                                    </a>
+                                                                    <a href="<?= base_url('/Home/delete_user/'. $data['id_user']) ?>">
+                                                                        <button class="btn btn-link btn-sm"><i class="mdi mdi-delete-sweep" style="color: #ff0000"></i></button>
+                                                                    </a>
+                                                                    <!-- <button class="btn btn-link btn-sm"><i class="mdi mdi-information-variant" style="color: #248afd"></i></button> -->
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
                                                     </tbody>
                                                 </table>
                                             </div>

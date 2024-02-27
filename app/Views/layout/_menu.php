@@ -7,11 +7,8 @@
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                     <ul class="navbar-nav navbar-nav-right">
                         <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="<?= base_url('assets/images/'.($settings -> profile ? $settings -> profile : 'default-profile.png')) ?>" alt="profile"/></a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="<?php echo base_url('assets/images/storage/'.($settings['_profile'] ? $settings['_profile'] : 'default-profile.png')) ?>" alt="profile" style="object-fit: cover;"/></a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
-                                    <i class="ti-settings text-primary"></i>Settings
-                                </a>
                                 <a href="<?= base_url('/home/authentication_logout') ?>" class="dropdown-item">
                                     <i class="ti-power-off text-primary"></i>Logout
                                 </a>
@@ -41,10 +38,26 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
+                                    <i class="mdi mdi-note-text"></i>
+                                    <span class="menu-title">Daftar Bermain</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="mdi mdi-cart menu-icon"></i>
+                                    <span class="menu-title">Pembayaran</span>
+                                </a>
+                            </li>
+
+                            <!-- <hr>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
                                     <i class="mdi mdi-file menu-icon"></i>
                                     <span class="menu-title">Laporan</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <hr>
 
@@ -56,7 +69,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="/Home/view_settings">
                                     <i class="mdi mdi-settings menu-icon"></i>
                                     <span class="menu-title">Settings</span>
                                 </a>
